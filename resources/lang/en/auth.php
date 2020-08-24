@@ -29,4 +29,5 @@ return [
     'logout' => "Logout",
     'dashboard' => "Dashboard",
     'logged_in' => "You are logged in!",
+    'profile' => "Your Profile",
 ];
