@@ -1,7 +1,7 @@
 <?php
 use App\Model;
 use Illuminate\Database\Seeder;
-
+use App\Models;
 
 class TaskSeeder extends Seeder
 {
@@ -12,6 +12,6 @@ class TaskSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Models\Task::class, 10)->create();
+        factory(Task::class, 10)->create();
     }
 }

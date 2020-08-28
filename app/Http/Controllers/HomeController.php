@@ -29,7 +29,6 @@ class HomeController extends Controller
     public function welcome()
     {   
         if (Auth::check()) {
-
             return view('home');
         }
         
