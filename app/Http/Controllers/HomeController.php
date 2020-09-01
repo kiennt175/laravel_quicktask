@@ -27,12 +27,11 @@ class HomeController extends Controller
         return view('home');
     }
     public function welcome()
-    {
+    {   
         if (Auth::check()) {
-
             return view('home');
         }
-
+        
         return view('welcome');
     }
 }
