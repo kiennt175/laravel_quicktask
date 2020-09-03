@@ -19,4 +19,7 @@ return [
     'confirm_deleting' => "Do you really want to delete?",
     'close' => "Close",
     'yes' => "Yes",
+    'vn' => "Vietnamese Version",
+    'el' => "English Version",
+    'version' => 'Versions',
 ];

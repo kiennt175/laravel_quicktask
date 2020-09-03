@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Session;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('changeLanguage');
     }
 
     /**
@@ -26,6 +27,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
     public function welcome()
     {   
         if (Auth::check()) {
@@ -33,5 +35,12 @@ class HomeController extends Controller
         }
         
         return view('welcome');
+    }
+
+    public function changeLanguage($language)
+    {
+        Session::put('website_language', $language);
+       
+        return back();
     }
 }
